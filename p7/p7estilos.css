@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #e3edd7;
+  color: #111827;
+  margin: 20px;
+}
+
+h1 {
+  color: #166433;
+}
+
+input {
+  padding: 6px 10px;
+  margin-right: 5px;
+  border-radius: 40px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 15px;
+}
+
+td {
+  border: 1px solid #627c6e;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #7a907b;
+  color: rgb(255, 255, 255);
+  border: 1px solid #627c6e;
+  padding: 8px;
+  text-align: center;
+}
+
+button{
+  background-color: #166433;
+  color:white;
+  border-radius: 40px;
+  padding: 6px 10px;
+  margin-right: 5px;
+}

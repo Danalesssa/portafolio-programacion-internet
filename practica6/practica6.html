@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 6</title>
+    <link rel="stylesheet" href="practica6.css">
+</head>
+<body>
+    <p><a href="../practica6/index.html"><strong>Regresar al menú</strong></a></p>
+
+    <div class="container">
+        <section>
+            <h2>Audio MP3</h2>
+            <audio controls>
+                <source src="assets/audio/abba.mp3" type="audio/mp3"/>
+            </audio>
+        </section>
+
+        <section>
+            <h2>Video MP4</h2>
+            <video controls width="600">
+                <source src="assets/video/abba.mp4" type="video/mp4" />
+            </video>
+        </section>
+
+        <section>
+            <h2>Video de YouTube</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RYk0_U7kf3g?si=AljNMG-_uv--DbJ7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <section>
+            <h2>X</h2>
+            <a class="twitter-timeline" href="https://x.com/TheHungerGames">X de The Hunger Games</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <script>
+
+getTweets();
+            </script>
+        </section>
+
+        <section>
+            <h2>Feed de Facebook</h2>
+            <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D10213707308463477%26set%3Da.4517009409817%26type%3D3&show_text=true&width=500" width="500" height="645" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+        </section>
+
+        <section>
+            <h2>Geolocalización con Google Maps</h2>
+            <div id="map" style="width: 100%; height: 400px;"></div>
+        </section>
+    </div>
+
+    <script>
+        function mapa() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 19.432608, lng: -99.133209},
+                zoom: 12
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbAeuaWuXakhQX3hjPzp-Y-64lNpK05pc&callback=mapa" async defer></script>
+    
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Convertidor de Unidades</title>
+<link rel="stylesheet" href="est.css">
+</head>
+
+<body>
+<div class="container">
+<h1>Conversor de Unidades</h1>
+<p>Selecciona la categoría y las unidades</p>
+
+<label for="categoria" >Categoría</label>
+<select id="categoria">
+    <option value="" selected disabled>Elige</option>
+    <option value="temperatura">Temperatura</option>
+    <option value="distancia">Distancia</option>
+    <option value="tiempo">Tiempo</option>
+    <option value="moneda">Moneda</option>
+</select>
+
+<div id="selects">
+    <div class="grupo" cat="temperatura" style="display:none"; >
+        <label>De:</label>
+        <select id="u1temp">
+            <option value="Celsius">Celsius</option>
+            <option value="Fahrenheit">Fahrenheit</option>
+            <option value="Kelvin">Kelvin</option>
+        </select>
+        <label>A:</label>
+        <select id="u2temp">
+            <option value="Celsius">Celsius</option>
+            <option value="Fahrenheit">Fahrenheit</option>
+            <option value="Kelvin">Kelvin</option>
+        </select>
+    </div>
+
+    <div class="grupo" cat="distancia" style="display:none;">
+        <label>De:</label>
+        <select id="u1dist">
+            <option value="Metros">Metros</option>
+            <option value="Kilómetros">Kilómetros</option>
+            <option value="Millas">Millas</option>
+            <option value="Pies">Pies</option>
+            <option value="Pulgadas">Pulgadas</option>
+        </select>
+        <label>A:</label>
+        <select id="u2dist">
+            <option value="Metros">Metros</option>
+            <option value="Kilómetros">Kilómetros</option>
+            <option value="Millas">Millas</option>
+            <option value="Pies">Pies</option>
+            <option value="Pulgadas">Pulgadas</option>
+        </select>
+    </div>
+
+    <div class="grupo" cat="tiempo" style="display:none;">
+        <label>De:</label>
+        <select id="u1tiempo">
+            <option value="Años">Años</option>
+            <option value="Días">Días</option>
+            <option value="Horas">Horas</option>
+            <option value="Segundos">Segundos</option>
+        </select>
+        <label>A:</label>
+        <select id="u2tiempo">
+            <option value="Años">Años</option>
+            <option value="Días">Días</option>
+            <option value="Horas">Horas</option>
+            <option value="Segundos">Segundos</option>
+        </select>
+    </div>
+
+    <div class="grupo" cat="moneda" style="display:none;">
+        <label>De:</label>
+        <select id="u1moneda">
+            <option value="MXN">MXN</option>
+            <option value="USD">USD</option>
+            <option value="Euro">Euro</option>
+        </select>
+        <label>A:</label>
+        <select id="u2moneda">
+            <option value="MXN">MXN</option>
+            <option value="USD">USD</option>
+            <option value="Euro">Euro</option>
+        </select>
+    </div>
+
+</div>
+<label for="valor">Valor</label>
+<input type="number" id="valor" value="1">
+
+<label for="res">Resultado</label>
+<input type="number" id="res" readonly>
+
+<button id="convertir">Convertir</button>
+<button id="volver">⬅ Volver al portafolio</button>
+
+</div>
+
+<script>
+    document.getElementById("categoria").addEventListener("change", function() {
+    document.querySelectorAll(".grupo").forEach(g => g.style.display="none");
+    document.querySelector(`.grupo[cat="${this.value}"]`).style.display="block";
+});
+</script>
+<script src="mt.js"></script>
+
+</body>
+</html>

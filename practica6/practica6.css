@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section {
+    margin: 20px 0;
+}
+
+audio, video, iframe, .fb-post, #map {
+    display: block;
+    margin: 0 auto;
+}
+
+p{
+    text-align: center;
+    color:black;
+}

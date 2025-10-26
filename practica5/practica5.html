@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Registro de videojuegos</title>
+<link rel="stylesheet" href="estlos5.css" />
+<script defer src="registro.js"></script>
+</head>
+<body>
+<h1>Registro de videojuegos</h1>
+
+<div id="errores" aria-live="polite"></div>
+
+<form id="form-juegos" action="javascript:void(0)" novalidate>
+    <label for="nombre">Nombre del juego:</label>
+    <input type="text" name="nombre" id="nombre"/>
+    <label for="correo">Correo:</label>
+    <input type="email" name="correo" id="correo"/>
+    <label>Plataforma:</label>
+    <label><input type="checkbox" name="plataforma" value="Steam" id="steam"> Steam</label>
+    <label><input type="checkbox" name="plataforma" value="Xbox Series" id="xbox"> Xbox Series</label>
+    <label><input type="checkbox" name="plataforma" value="PlayStation 5" id="ps5"> PlayStation 5</label>
+    <label>Medio:</label>
+    <label><input type="radio" name="medio" value="Físico" id="fisico"> Físico</label>
+    <label><input type="radio" name="medio" value="Digital" id="digital"> Digital</label>
+    <label><input type="radio" name="medio" value="Suscripción" id="subs"> Suscripción</label>
+    <label for="fecha">Fecha y hora de adquisición:</label>
+    <input type="datetime-local" name="fecha" id="fecha" />
+    <label for="color">Color favorito:</label>
+    <input type="color" name="color" id="color" value="#000"/>
+    <label for="calif">Calificación: <output id="out-calif">5</output></label>
+    <input type="range" name="calif" id="calif" min="0" max="10" step="1" value="5" />
+
+    <button type="button" id="registrar">Enviar</button>
+</form>
+    <p><a href="../practica5/index.html">Regresar al menú</a></p>
+
+
+<table id="tabla">
+    <thead>
+        <tr>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Plataformas</th>
+        <th>Medio</th>
+        <th>Fecha y hora</th>
+        <th>Color</th>
+        <th>Calificación</th>
+        </tr>
+    </thead>
+    <tbody id="juegos"></tbody>
+</table>
+</body>
+</html>
